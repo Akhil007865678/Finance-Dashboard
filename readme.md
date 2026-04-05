@@ -1,3 +1,228 @@
+# 💰 Finance Dashboard Backend
+
+A production-ready backend system for managing financial records with **role-based access control**, **advanced analytics**, and **secure APIs**.
+
+---
+
+## 🚀 Overview
+
+This project provides a robust backend for tracking income and expenses, generating insights, and managing users with different access levels.
+
+It is designed with **scalability, security, and clean architecture** in mind.
+
+---
+
+## ✨ Key Features
+
+### 🔐 Authentication & Security
+
+* JWT-based authentication
+* Password hashing using bcrypt
+* Protected routes with middleware
+
+---
+
+### 👥 Role-Based Access Control (RBAC)
+
+* **Viewer** → Read-only access
+* **Analyst** → View + analytics
+* **Admin** → Full access (CRUD + user management)
+
+---
+
+### 💰 Financial Records Management
+
+* Create, update, delete (soft delete) records
+* Filter by type and category
+* Search across multiple fields
+* Pagination for efficient data handling
+
+---
+
+### 📊 Dashboard Analytics
+
+* Total Income & Expense
+* Net Balance
+* Category-wise breakdown
+* Monthly & Yearly trends
+* Recent transactions
+
+---
+
+### 🔄 Status Management
+
+* Toggle user status (active/inactive)
+* Inactive users:
+
+  * ❌ Cannot log in
+  * ❌ Cannot access APIs
+
+---
+
+### 🧹 Soft Delete
+
+* Records are not permanently deleted
+* Stored with `isDeleted` flag
+* Ensures data recovery and audit safety
+
+---
+
+### 🔍 Advanced Query Features
+
+* Pagination (`page`, `limit`)
+* Search (`search`)
+* Filtering (`type`, `category`)
+* Sorting (latest records first)
+
+---
+
+## 🛠️ Tech Stack
+
+* **Node.js**
+* **Express.js**
+* **MongoDB + Mongoose**
+* **JWT (Authentication)**
+* **Joi (Validation)**
+
+---
+
+## 📁 Project Structure
+
+```
+/src
+  /config
+  /controllers
+  /models
+  /routes
+  /middleware
+  /utils
+  /postman
+server.js
+.env
+```
+
+---
+
+## 📡 API Endpoints
+
+### 🔐 Auth
+
+* `POST /api/auth/register`
+* `POST /api/auth/login`
+
+---
+
+### 👥 Users (Admin Only)
+
+* `GET /api/users`
+* `PUT /api/users/:id` → Update role
+* `PATCH /api/users/status/:id` → Toggle status
+
+---
+
+### 💰 Records
+
+* `POST /api/records`
+* `GET /api/records` (pagination + search + filters)
+* `PUT /api/records/:id`
+* `DELETE /api/records/:id` (soft delete)
+
+---
+
+### 📊 Dashboard
+
+* `GET /api/dashboard/summary`
+* `GET /api/dashboard/trends?type=monthly|yearly`
+* `GET /api/dashboard/recent`
+
+---
+
+## 🧪 API Testing
+
+A complete Postman collection is included:
+
+```
+/postman/Finance-Dashboard.postman_collection.json
+```
+
+---
+
+## ▶️ Run Locally
+
+### 1. Clone Repository
+
+```bash
+git clone <your-repo-link>
+cd finance-dashboard-backend
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Setup Environment Variables
+
+Create `.env` file:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+### 4. Start Server
+
+```bash
+npm start
+```
+
+---
+
+## 🔒 Access Control Summary
+
+| Role    | Permissions      |
+| ------- | ---------------- |
+| Viewer  | Read-only        |
+| Analyst | Read + Analytics |
+| Admin   | Full Access      |
+
+---
+
+## ⚡ Design Decisions
+
+* **Soft Delete** used instead of permanent deletion for data safety
+* **Aggregation Pipelines** used for efficient analytics
+* **Middleware-based RBAC** for clean and reusable authorization
+* **Joi Validation** to ensure data integrity
+
+---
+
+## 🎯 Future Improvements
+
+* CSV/Excel export
+* Email notifications
+* Real-time analytics
+* API rate limiting
+
+---
+
+## 🙌 Author
+
+**Akhil**
+
+---
+
+## 📌 Note
+
+This project focuses on backend architecture, scalability, and real-world API design.
+
+---
+
+⭐ If you like this project, feel free to give it a star!
+
+
 🔐 Authentication Endpoints
 
 1. User Registration
