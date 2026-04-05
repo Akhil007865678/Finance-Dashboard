@@ -21,6 +21,11 @@ app.use("/api/dashboard", require("./routes/dashboardRoutes"));
 
 app.use(errorHandler);
 
+// Keeps the server awake by responding to periodic pings to prevent sleep mode.
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
 app.listen(process.env.PORT, () =>
   console.log(`Server running on port ${process.env.PORT}`)
 );
