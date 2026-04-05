@@ -14,7 +14,6 @@ It is designed with **scalability, security, and clean architecture** in mind.
 
 ## 📡 Live Demo
 - **API Base URL:** https://finance-dashboard-5hbr.onrender.com
-- **Note:** This project is hosted on Render's free tier. The initial request may take **15-30 seconds** to load as the server "wakes up" from a cold start. Subsequent requests will be much faster.
 
 ---
 
