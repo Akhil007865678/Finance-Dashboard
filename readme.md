@@ -181,8 +181,8 @@ npm run dev
 
 ```json
 {
-  "name": "Rohit",
-  "email": "rohit@test.com",
+  "name": "Akhil",
+  "email": "akhil@test.com",
   "password": "123456"
 }
 ```
@@ -195,7 +195,7 @@ npm run dev
 
 ```json
 {
-  "email": "rohit@test.com",
+  "email": "akhil@test.com",
   "password": "123456"
 }
 ```
@@ -243,8 +243,8 @@ Authorization: Bearer <token>
 
 ```json
 {
-  "name": "Rohit",
-  "email": "rohit@test.com",
+  "name": "Akhil",
+  "email": "akhil@test.com",
   "password": "123456"
 }
 ```
