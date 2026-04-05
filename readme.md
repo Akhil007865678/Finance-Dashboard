@@ -89,14 +89,13 @@ It is designed with **scalability, security, and clean architecture** in mind.
 ## 📁 Project Structure
 
 ```
-/src
-  /config
-  /controllers
-  /models
-  /routes
-  /middleware
-  /utils
-  /postman
+/config
+/controllers
+/models
+/routes
+/middleware
+/utils
+/postman
 server.js
 .env
 ```
